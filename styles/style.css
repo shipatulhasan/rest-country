@@ -58,7 +58,7 @@ img {
 }
 
 .search-div{
-    width: 50%;
+    width: 90%;
     margin: 0 auto;
     border-bottom: 2px solid tomato;
     background: rgba(255, 255, 255, 0.822);
@@ -76,6 +76,7 @@ input{
     border: none;
     background: transparent;
     color: #2a2a2a;
+    width: 70%;
 }
 input:active{
     background-color: #000;
@@ -87,4 +88,13 @@ input:active{
 }
 input:-webkit-autofill { 
     -webkit-background-clip: text;
+}
+
+@media (min-width: 768px){
+    .search-div{
+        width: 50%;
+    }
+    input{
+        width: 75%;
+    }
 }
