@@ -1,4 +1,5 @@
-
+const loader = document.getElementById('preloader')
+// spiner
 const loadData = () =>{
   const url = 'https://restcountries.com/v3.1/all'
   fetch(url)
@@ -6,6 +7,9 @@ const loadData = () =>{
   .then(data => display(data))
 }
 loadData()
+
+
+
 
 const container = document.getElementById('country-container')
 
@@ -38,6 +42,7 @@ const display = (countries)=>{
               </div>
           
             `
+  loader.style.display = 'none'
   container.appendChild(div)
       
       

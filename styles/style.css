@@ -90,6 +90,13 @@ input:-webkit-autofill {
     -webkit-background-clip: text;
 }
 
+#preloader{
+    width: 100%;
+    background:no-repeat center url(../images/Loading_icon.gif);
+    height: 50vh;
+    z-index: 999;
+}
+
 @media (min-width: 768px){
     .search-div{
         width: 50%;
