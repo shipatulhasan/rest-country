@@ -78,7 +78,7 @@ const displayModal = (data) =>{
           </div>
           <div class="modal-body">
                <img src="${data.flags.svg}" class="img-fluid rounded" alt="...">
-            <div class="px-3 pt-4">
+            <div class="px-1 pt-4">
             <p class="card-text pt-2"><b>Capital:</b> <span class="text-muted">${data.capital ? data.capital[0] : 'No capital'}</span> </p>
                <p class="card-text"><b>Continent:</b> <span class="text-muted">${data.continents[0]}</span> </p>
                <p class="card-text"><b>Population:</b> <span class="text-muted">${population}</span> </p>
