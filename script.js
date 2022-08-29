@@ -83,7 +83,9 @@ const displayModal = (data) =>{
               <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
           </div>
           <div class="modal-body">
+          <div class ="flag">
                <img src="${data.flags.svg}" class="img-fluid rounded" alt="...">
+               </div>
             <div class="px-1 pt-4">
             <p class="card-text pt-2"><b>Capital:</b> <span class="text-muted">${data.capital ? data.capital[0] : 'No capital'}</span> </p>
                <p class="card-text"><b>Continent:</b> <span class="text-muted">${data.continents[0]}</span> </p>
