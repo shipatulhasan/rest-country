@@ -1,0 +1,90 @@
+/*********
+     Fonts 
+**********/
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,400&display=swap');
+
+/**********
+Utilities 
+*************/
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    font-family: 'Poppins', sans-serif;
+}
+.btn:focus{
+    box-shadow: none;
+}
+.btn{
+    letter-spacing: 1px;
+}
+
+
+
+/**************
+    Slider Style 
+************/
+  
+
+section.hero{
+    background: no-repeat url(../images/bg.jpg);
+    background-position: center center;
+    background-size: cover;
+    border-radius: 10px;
+    /* overflow: hidden; */
+    background-blend-mode: overlay;
+    background-color: rgba(0, 0, 0, 0.445);
+    
+}
+.hero .row{
+    height: 60vh;
+}
+
+
+.card{
+    background: rgb(240, 240, 240);
+}
+.btn{
+    font-size: 14px;
+    font-weight: bold;
+    letter-spacing: 2px;
+}
+
+img {
+    width: 250px;
+    height: 150px;
+    max-width: 100%;
+}
+
+.search-div{
+    width: 50%;
+    margin: 0 auto;
+    border-bottom: 2px solid tomato;
+    background: rgba(255, 255, 255, 0.822);
+    padding: 20px;
+    border-radius: 5px;
+}
+input:focus{
+    outline: none!important; 
+    background: transparent!important;
+}
+input:focus-visible {
+    outline: none;
+}
+input{
+    border: none;
+    background: transparent;
+    color: #2a2a2a;
+}
+input:active{
+    background-color: #000;
+}
+.src-btn{
+    background: transparent;
+    border: none;
+    color:#2a2a2a;
+}
+input:-webkit-autofill { 
+    -webkit-background-clip: text;
+}

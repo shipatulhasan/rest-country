@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Travel Buddy - Explore Every Momment of Life</title>
+
+  <!-- Fontawsome CDN -->
+  <script src="https://kit.fontawesome.com/59949b2abf.js" crossorigin="anonymous"></script>
+
+  <!-- Bootstrap CDN -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
+
+  <!-- stylesheets -->
+  <link rel="stylesheet" href="styles/style.css">
+
+</head>
+
+<body>
+  <!-- Header parts -->
+  <header>
+
+   
+
+    <!-- Slider part -->
+    <section class="hero container mt-5 pb-3 pb-md-5">
+      <div class="row d-flex justify-content-center align-items-center">
+             <div class="search-div text-center border-b-2 border-red-400 d-flex justify-content-between align-items-center px-3">
+               <input type="text" class="w-75 fs-5" placeholder="type country name" id="search-field">
+       
+               <button id="search-btn" class="src-btn" onclick="searchCountry(event)" >
+                   <i class="fa-solid fa-magnifying-glass"></i>
+                   Search
+               </button>
+ 
+         
+       </div>  
+      </div>
+    </section>
+  </header>
+  <!-- Header part end -->
+
+  <!-- Main part start -->
+
+  <main class="container ">
+    <!-- Courses -->
+    <section class="courses py-3 py-md-5">
+      <div class="row justify-content-center">
+        <div class="col-md-8 col-lg-6">
+          <div class="headline lh-base text-capitalize text-center px-3 mx-auto text-dark">
+            <h2 class="fs-1 fw-bold pb-2">Discover <span class="text-warning"> </span>Countries</h2>
+          </div>
+        </div>
+      </div>
+
+      <div class="py-3 py-md-5">
+        <div id="country-container" class="row row-cols-1 row-cols-lg-2 g-4">
+          <!-- countries -->
+      </div>
+
+    </section>
+ 
+
+        <!-- Modal -->
+        <div class="modal fade" id="vehicles-modal" tabindex="-1" aria-labelledby="mymodalLabel" style="display: none;" aria-hidden="true">
+          <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content" id="vehicles-details">
+    
+            </div>
+          </div>
+        </div>
+  </main>
+
+  <!-- Main part end -->
+
+  <!-- Footer -->
+
+  
+
+
+  <!-- Bootstrap script CDN -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa" crossorigin="anonymous">
+  </script>
+  <script src="./objects.js"></script>
+  <script src="./script.js"></script>
+</body>
+
+</html>
