@@ -90,10 +90,11 @@ input:-webkit-autofill {
     -webkit-background-clip: text;
 }
 
-#preloader{
+.preloader{
     width: 100%;
     background:no-repeat center url(../images/Loading_icon.gif);
     height: 50vh;
+    background-size: 15%;
     z-index: 999;
 }
 

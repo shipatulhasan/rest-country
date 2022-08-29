@@ -1,4 +1,3 @@
-const loader = document.getElementById('preloader')
 // spiner
 const loadData = () =>{
   const url = 'https://restcountries.com/v3.1/all'
@@ -14,11 +13,11 @@ loadData()
 const container = document.getElementById('country-container')
 
 const display = (countries)=>{
+  const loader = document.getElementById('preloader')
+
 
   container.textContent = ''  
   
-
-    // const stringifiedObj = JSON.stringify(vehicles);
     countries.forEach(country => {
       const div = document.createElement('div')
       div.classList.add('col')
@@ -64,7 +63,9 @@ function countryDetails(code){
 
 const displayModal = (data) =>{
   
- const modalContainer = document.getElementById('vehicles-details') 
+ const modalContainer = document.getElementById('country-details')
+ const modalLoader = document.getElementById('preloader')
+ 
  
  const cur =  Object.values(data.currencies)
  const {name,symbol} = cur[0]
@@ -74,7 +75,7 @@ const displayModal = (data) =>{
 //  const values = data.currencies[cur].name
 
 //  console.log(name,symbol)
- console.log(data)
+modalLoader.style.display = 'none'
 
   modalContainer.innerHTML = `
           <div class="modal-header">
