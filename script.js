@@ -23,7 +23,7 @@ const display = (countries)=>{
       div.classList.add('col')
       div.innerHTML = `
               <div class="card h-100 shadow p-4">
-              <div class="row gx-2 gx-lg-1 align-items-start">
+              <div class="row gx-0 gx-lg-1 align-items-start">
                 <div class="col-md-4 col-lg-5 ">
                   <img src="${country.flags.png}" class="rounded " alt="...">
                 </div>
