@@ -75,7 +75,7 @@ const displayModal = (data) =>{
 //  const values = data.currencies[cur].name
 
 //  console.log(name,symbol)
-modalLoader.style.display = 'none'
+
 
   modalContainer.innerHTML = `
           <div class="modal-header">
@@ -93,7 +93,9 @@ modalLoader.style.display = 'none'
                <p class="card-text"><b>Map:</b> <a class="text-primary" href=${data.maps['googleMaps']} target="_blank">click here</a></p>
                
           </div>
+
   `
+  modalLoader.style.display = 'none'
 }
 
 const searchData = async(search)=>{
