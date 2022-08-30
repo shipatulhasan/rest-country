@@ -103,7 +103,7 @@ const displayModal = (data) =>{
           </div>
           <div class="modal-body">
           <div class ="flag">
-               <img src="${data.flags.svg}" class="img-fluid rounded" alt="...">
+               <img src="${data.flags.svg}" class="rounded" alt="...">
                </div>
             <div class="px-1 pt-4">
             <p class="card-text pt-2"><b>Capital:</b> <span class="text-muted">${data.capital ? data.capital[0] : 'No capital'}</span> </p>
