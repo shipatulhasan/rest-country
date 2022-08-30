@@ -66,10 +66,16 @@ const display = (countries)=>{
 /** */
 
 function countryDetails(code){
+  try{
+
     const url = `https://restcountries.com/v3.1/alpha/${code}`
     fetch(url)
     .then(res => res.json())
     .then(data => displayModal(data[0]))
+  }
+  catch{
+    alert('no data found')
+  }
     
 
 }
@@ -78,12 +84,13 @@ const displayModal = (data) =>{
   
  const modalContainer = document.getElementById('country-details')
  const modalLoader = document.getElementById('preloader')
+ console.log(data)
  
  
- const cur =  Object.values(data.currencies)
+ const cur = data.currencies ? Object.values(data.currencies) : 'no currecies found'
  const {name,symbol} = cur[0]
 
- const population = (data.population).toLocaleString("en-US") 
+ const population =data.population ? (data.population).toLocaleString("en-US") : 'No population found' 
  
 //  const values = data.currencies[cur].name
 
@@ -102,8 +109,8 @@ const displayModal = (data) =>{
             <p class="card-text pt-2"><b>Capital:</b> <span class="text-muted">${data.capital ? data.capital[0] : 'No capital'}</span> </p>
                <p class="card-text"><b>Continent:</b> <span class="text-muted">${data.continents[0]}</span> </p>
                <p class="card-text"><b>Population:</b> <span class="text-muted">${population}</span> </p>
-               <p class="card-text"><b>Languages:</b> <span class="text-muted">${Object.values(data.languages).toString().split(',').join(', ')}</span> </p>
-               <p class="card-text"><b>Currency:</b><span class="text-muted"> (${symbol})${name}</span> </p>
+               <p class="card-text"><b>Languages:</b> <span class="text-muted">${data.languages ? Object.values(data.languages).toString().split(',').join(', ') : 'No languages found'}</span> </p>
+               <p class="card-text"><b>Currency:</b><span class="text-muted"> (${symbol?symbol:'--'})${name ? name : '--'}</span> </p>
                <p class="card-text"><b>Map:</b> <a class="text-primary" href=${data.maps['googleMaps']} target="_blank">click here</a></p>
                
           </div>
