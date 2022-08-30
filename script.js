@@ -1,4 +1,17 @@
 // spiner
+const spiner = (isTrue)=>{
+  const loader = document.getElementById('preloader')
+  if(isTrue){
+    loader.style.display = 'block'
+  }
+  else{
+    loader.style.display = 'none'
+
+  }
+}
+// spineer end
+
+
 const loadData = () =>{
   const url = 'https://restcountries.com/v3.1/all'
   fetch(url)
@@ -8,13 +21,13 @@ const loadData = () =>{
 loadData()
 
 
-
-
 const container = document.getElementById('country-container')
 
-const display = (countries)=>{
-  const loader = document.getElementById('preloader')
 
+const display = (countries)=>{
+
+  // spiner start
+  spiner(true)
 
   container.textContent = ''  
   
@@ -41,7 +54,7 @@ const display = (countries)=>{
               </div>
           
             `
-  loader.style.display = 'none'
+  spiner(false)
   container.appendChild(div)
       
       
@@ -75,7 +88,6 @@ const displayModal = (data) =>{
 //  const values = data.currencies[cur].name
 
 //  console.log(name,symbol)
-
 
   modalContainer.innerHTML = `
           <div class="modal-header">
@@ -111,7 +123,7 @@ const searchData = async(search)=>{
     if(search == ''){
       loadData()
     }else{
-
+      spiner(false)
       container.innerHTML = `
       <div class="mx-auto text-danger"><h5 class="text-center">No data Found</h5></div>
         `
@@ -119,6 +131,8 @@ const searchData = async(search)=>{
   }
 }
 const searchCountry = (event) =>{
+  // spiner
+  spiner(true)
   event.preventDefault()
   const searchField = document.getElementById('search-field')
   const searchValue = searchField.value

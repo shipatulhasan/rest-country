@@ -94,10 +94,13 @@ input:-webkit-autofill {
 }
 
 .preloader{
+    display: flex;
+    justify-content: center;
+    align-items: center;
     width: 100%;
     background:no-repeat center url(../images/Loading_icon.gif);
     height: 50vh;
-    background-size: 40%;
+    background-size: 30%;
     z-index: 999;
 }
 
