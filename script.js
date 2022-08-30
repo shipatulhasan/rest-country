@@ -131,9 +131,22 @@ const searchData = async(search)=>{
   }
 }
 const searchCountry = (event) =>{
+  event.preventDefault()
+  process()
+  
+}
+
+// enter keypress search
+document.getElementById('search-field').addEventListener('keypress',function(e){
+  if(e.key === 'Enter'){
+    process()
+  }
+})
+
+
+const process = () =>{
   // spiner
   spiner(true)
-  event.preventDefault()
   const searchField = document.getElementById('search-field')
   const searchValue = searchField.value
   searchField.value = ''
